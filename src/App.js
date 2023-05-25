@@ -6,7 +6,7 @@ import './App.css'
 
 class App extends Component {
   state = {
-    isLoggedIn: false,
+    isLoggedIn: true,
   }
   //   state = {
   //     isLoggedIn: false,
@@ -36,7 +36,10 @@ class App extends Component {
     // }
     return (
       <div className="container">
-        <Welcome greeting="Hello" name="User" />
+        {/* <Welcome greeting="Hello" name="User" /> */}
+
+        {/* default Props */}
+        <Welcome />
 
         {/* // if - else condition rendering */}
         {/* {this.renderAuthButton()} */}
@@ -48,7 +51,11 @@ class App extends Component {
         {/* {isLoggedIn ? <button>Logout</button> : <button>Login</button>} */}
 
         {/* using Ternary operator null values */}
-        {isLoggedIn ? <button>Logout</button> : null}
+        {/* {isLoggedIn ? <button>Logout</button> : null} */}
+
+        {/* Using Logical && Operator */}
+        {isLoggedIn && <button>Logout</button>}
+        {!isLoggedIn && <button>Login</button>}
       </div>
     )
   }
