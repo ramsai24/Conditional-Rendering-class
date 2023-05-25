@@ -27,11 +27,13 @@ class App extends Component {
     const {isLoggedIn} = this.state
     let authButton
 
-    if (isLoggedIn === true) {
-      authButton = <button>Logout</button>
-    } else {
-      authButton = <button>Login</button>
-    }
+    // if - else using Element Variables
+
+    // if (isLoggedIn === true) {
+    //   authButton = <button>Logout</button>
+    // } else {
+    //   authButton = <button>Login</button>
+    // }
     return (
       <div className="container">
         <Welcome greeting="Hello" name="User" />
@@ -40,7 +42,10 @@ class App extends Component {
         {/* {this.renderAuthButton()} */}
 
         {/* if - else using Element Variables  */}
-        {authButton}
+        {/* {authButton} */}
+
+        {/* using Ternary operator */}
+        {isLoggedIn ? <button>Logout</button> : <button>Login</button>}
       </div>
     )
   }
