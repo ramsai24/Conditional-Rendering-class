@@ -6,7 +6,7 @@ import './App.css'
 
 class App extends Component {
   state = {
-    isLoggedIn: true,
+    isLoggedIn: false,
   }
   //   state = {
   //     isLoggedIn: false,
@@ -25,7 +25,7 @@ class App extends Component {
 
   render() {
     const {isLoggedIn} = this.state
-    let authButton
+    // let authButton
 
     // if - else using Element Variables
 
@@ -45,7 +45,10 @@ class App extends Component {
         {/* {authButton} */}
 
         {/* using Ternary operator */}
-        {isLoggedIn ? <button>Logout</button> : <button>Login</button>}
+        {/* {isLoggedIn ? <button>Logout</button> : <button>Login</button>} */}
+
+        {/* using Ternary operator null values */}
+        {isLoggedIn ? <button>Logout</button> : null}
       </div>
     )
   }
