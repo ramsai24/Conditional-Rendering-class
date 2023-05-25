@@ -5,16 +5,27 @@ import Welcome from './components/Welcome'
 import './App.css'
 
 class App extends Component {
+  //   state = {
+  //     isLoggedIn: true,
+  //   }
   state = {
-    isLoggedIn: true,
+    isLoggedIn: false,
+  }
+
+  renderAuthButton = () => {
+    const {isLoggedIn} = this.state
+
+    if (isLoggedIn === true) {
+      return <button>Logout</button>
+    }
+    return <button>Login</button>
   }
 
   render() {
     return (
       <div className="container">
         <Welcome greeting="Hello" name="User" />
-        <button>Login</button>
-        <button>Logout</button>
+        {this.renderAuthButton()}
       </div>
     )
   }
